@@ -1,0 +1,7 @@
+interface:
+  display_name: "Obsidian Vault Daily"
+  short_description: "Find and save daily context in an Obsidian vault"
+  default_prompt: "Use $obsidian-vault-daily to read today's handoff and summarize the open work."
+
+policy:
+  allow_implicit_invocation: true

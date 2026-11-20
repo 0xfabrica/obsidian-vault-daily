@@ -6,14 +6,21 @@ Works with any vault. QMD is optional: it adds local keyword and semantic search
 
 ## Install the skill
 
-For Codex, clone this repository into your skills folder:
+The [Skills CLI](https://www.skills.sh/docs/cli) installs this repository into supported agents. It runs through `npx`, so no global CLI install is required:
 
 ```sh
-mkdir -p ~/.codex/skills
-git clone https://github.com/0xfabrica/obsidian-vault-daily.git ~/.codex/skills/obsidian-vault-daily
+npx skills add 0xfabrica/obsidian-vault-daily
 ```
 
-Restart or reload Codex if the skill does not appear. For another assistant that supports Agent Skills, place this repository in that assistant's skill directory with `SKILL.md` at the root of the `obsidian-vault-daily` folder.
+The CLI detects available agents and asks where to install. To target Claude Code and Codex globally in one command:
+
+```sh
+npx skills add 0xfabrica/obsidian-vault-daily --skill obsidian-vault-daily --agent claude-code codex --global --yes
+```
+
+To link it to every supported agent, use `--agent '*'` instead. The same Agent Skill also works with other compatible clients; see the [supported agents](https://www.skills.sh/).
+
+The skill is installable directly from GitHub. skills.sh adds public skills to its directory from install events, so its searchable listing may appear after someone installs it with the CLI and leaves anonymous telemetry enabled. No separate submission or plugin package is required.
 
 ## Get started
 
